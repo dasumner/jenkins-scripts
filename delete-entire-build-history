@@ -1,4 +1,6 @@
-def jobName = "Sync Rhode Island Branches GitHub to Acquia"  
+# Run from script console
+# Will delete th entire build history for the named project
+def jobName = "My_Project_Name"  
 def job = Jenkins.instance.getItem(jobName)  
 job.getBuilds().each { it.delete() }  
 job.nextBuildNumber = 1   
